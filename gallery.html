@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--  *****   Link To Custom CSS Style Sheet   *****  -->
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+
+	<!--  *****   Link To Font Awsome Icons   *****  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MetaMatrixbuildsworks</title>
+</head>
+<body>
+<section class="portfolio">
+	
+	<header class="section-head">
+		<h1>Some Of Our Latest Works</h1>
+	</header>
+
+	<main class="mainContainer">
+		
+		<!--  *****  Buttons Section Starts  *****  -->
+		<div class="button-group">
+			<button class="button active" data-filter="*">All</button>
+			<button class="button" data-filter=".design">Design</button>
+		<button class="button" data-filter=".development">Kitchen</button>
+			<button class="button" data-filter=".logo">Bedroom</button>
+		</div>
+		<!--  *****  Buttons Section Ends  *****  -->
+
+		<!--  *****  Gallery Section Starts  *****  -->
+		<div class="gallery">
+			
+			<!--  *****  Card 1 Starts  *****  -->
+			<div class="item design">
+				<img src="img/d1.jpg">
+                <img src="img/d2.jpg">
+                <img src="img/d3.jpg">
+				
+
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+			<!--  *****  Card 1 Ends  *****  -->
+
+			<!--  *****  Card 2 Starts  *****  -->
+			<div class="item design">
+				<img src="img/d5.jpg">
+				<img src="img/d6.jpg">
+				<img src="img/d7.jpg">
+				
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+
+			<div class="item design">
+				<img src="img/d4.jpg">
+				<img src="img/d8.jpg">
+				<img src="img/d9.jpg">
+				
+				
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+			<!--  *****  Card 2 Ends  *****  -->
+
+			<!--  *****  Card 3 Starts  *****  -->
+			<div class="item development">
+				
+				<img src="img/k1.jpg">
+				<img src="img/k2.jpg">
+				<img src="img/k3.jpg">
+				
+				
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+			<!--  *****  Card 3 Ends  *****  -->
+
+			<!--  *****  Card 4 Starts  *****  -->
+			<div class="item development">
+				<img src="img/k4.jpg">
+				<img src="img/k5.jpg">
+				<img src="img/k6.jpg">
+				
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+			<!--  *****  Card 4 Ends  *****  -->
+
+			<!--  *****  Card 5 Starts  *****  -->
+			<div class="item development">
+				<img src="img/k7.jpg">
+				<img src="img/k8.jpg">
+				<img src="img/k9.jpg">
+				
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+			<!--  *****  Card 5 Ends  *****  -->
+
+			<!--  *****  Card 6 Starts  *****  -->
+			<div class="item logo">
+				<img src="img/b1.jpg">
+                <img src="img/b2.jpg">
+				<img src="img/b3.jpg">
+                
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+			<!--  *****  Card 6 Ends  *****  -->
+			<div class="item logo">
+				<img src="img/b4.jpg">
+				<img src="img/b5.jpg">
+				<img src="img/b6.jpg">
+                
+                
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+			<div class="item logo">
+				<img src="img/b7.jpg">
+				<img src="img/b8.jpg">
+				<img src="img/b9.jpg">
+                
+                
+				<!--div class="overlay">
+					<a href="#">VIEW MORE</a>
+				</div-->
+			</div>
+
+		</div>
+		<!--  *****  Gallery Section Ends  *****  -->
+
+	</main>
+
+</section>
+
+
+<!--   *****   JQuery Link   *****   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!--   *****   Isotope Filter Link   *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript">
+	var $galleryContainer = $('.gallery').isotope({
+		itemSelector: '.item',
+  		layoutMode: 'fitRows'
+	})
+
+	$('.button-group .button').on('click', function(){
+		$('.button-group .button').removeClass('active');
+		$(this).addClass('active');
+
+		var value = $(this).attr('data-filter');
+		$galleryContainer.isotope({
+			filter: value 
+		})
+	})
+</script>
+
+</body>
+</html>
